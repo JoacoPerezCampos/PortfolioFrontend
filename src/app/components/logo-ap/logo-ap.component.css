@@ -1,4 +1,5 @@
 .image-thumbnail{
     width: auto;
-    height: 6em;    
+    height: 6em;
+    align-self: start;
 }
