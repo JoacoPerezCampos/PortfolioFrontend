@@ -1,5 +1,8 @@
 .container-fluid{
-    background-color: #333;
+    background-color: #3d3d3c;
     margin: 8px;
-    border-radius: 2px;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 2em,2em,2em,2em;
+    border-radius: 1em;
 }
