@@ -1,6 +1,8 @@
 img{
     width:auto;
     height: 2em;
-    padding: 1em;
-    float:inline-end;
+    margin-top: 2em;
+    padding: 0.25em;
+    float:right;
+    vertical-align: center;
 }

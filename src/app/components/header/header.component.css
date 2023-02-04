@@ -1,6 +1,6 @@
-.container-fluid{
-    float: inline-end;
+nav{
     background-color: #333;
-    padding: 2em;
-    margin: 2em,
+    position:fixed;
+    width:100%;
+    height: auto;
 }
