@@ -1,0 +1,11 @@
+nav{
+    background-color: #333;
+    position:fixed;
+    width:100%;
+    height: auto;
+    max-height: 100px;
+}
+h3{
+    text-align: center;
+    font-weight: bold;
+}
