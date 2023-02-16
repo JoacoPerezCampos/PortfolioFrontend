@@ -1,5 +1,7 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+.main{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:large;
+    font-weight: lighter;
     color: antiquewhite;
     background-color: black;
     width:100%;
