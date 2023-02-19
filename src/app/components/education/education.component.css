@@ -9,3 +9,14 @@
 h5,h6{
     display: inline;
 }
+
+img{
+    width:auto;
+    height:5em;
+    vertical-align: center;
+    margin-top: 1em;
+}
+
+#ism{
+    border-radius: 51%;
+}

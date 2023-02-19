@@ -5,14 +5,16 @@
     width: fit-content;
     height: auto;
 }
-
+#img-div{
+    display: flex;
+    justify-content:space-around;
+}
 #profile_pic {
-    align-items: center;
     border-radius: 50%;
     width: 250px;
     height: 250px;
-    top: -15%;
-    left: 20%;
+    top: -10%;
+    box-shadow: 3px 3px 3px #333;
     position: relative;
     z-index: 2;
 }
@@ -23,7 +25,6 @@
     right: 5%;
     position: relative;
     z-index: 2;
-    vertical-align: baseline;
 }
 
 #about {
