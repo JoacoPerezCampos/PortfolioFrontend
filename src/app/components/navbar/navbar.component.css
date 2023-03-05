@@ -1,16 +1,66 @@
-nav{
-    background-color: #20281f;
-    position:fixed;
-    width:100%;
+.navbar {
+    position: fixed;
+    width: 100%;
     height: auto;
     vertical-align: middle;
 }
-h3{
+
+.apLogoImg {
+    width: 7.5em;
+    height: auto;
+}
+
+h3 {
     text-align: center;
     font-weight: bold;
     vertical-align: middle;
 }
-#social{
+
+#social {
     text-align: right;
+}
+
+.socialLogo {
+    width: auto;
+    height: 2em;
+    padding-right: 0.5em;
+}
+
+.btn {
+    border-radius: 2em;
+    padding: 0.5em;
+    margin-right: 1em;
+    text-align: center;
     vertical-align: middle;
+    font-size: auto;
+}
+@media (max-width: 628px){
+    .socialLogo{
+        width: auto;
+        height: 1.5em;
+        padding-right: 0.2em;
+    }
+    .btn{
+        width: auto;
+        font-size: small;
+    }
+}
+@media (max-width: 576px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+    }
+    #social{
+        text-align: center;
+        padding: 0.5em 0rem 0.5em 0.3em;
+    }
+    #apLogo{
+        text-align: center;
+   }
+   .btn{
+    margin-right: 0em;
+   }
 }

@@ -9,3 +9,10 @@ img{
     border-radius: 1em;
     z-index: 1;
 }
+
+
+@media (max-width: 576px){
+   img{
+        margin-top: 10.5em;
+    }
+}

@@ -1,9 +1,9 @@
-img{
+.socialLogo{
     width:auto;
     height: 1.5em;
     padding-right: 0.5em;
 }
-button{
+.btn{
     border-radius: 2em;
     padding: 0.5em;
     margin-right: 1em;
