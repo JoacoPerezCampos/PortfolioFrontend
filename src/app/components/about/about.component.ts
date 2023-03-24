@@ -9,7 +9,7 @@ import { PersonService } from 'src/app/service/person.service';
   
 })
 export class AboutComponent implements OnInit {
-  person: Person = new Person("", "", "");
+  person: Person = new Person("", "", "","");
 
   constructor(public personService: PersonService) { }
 

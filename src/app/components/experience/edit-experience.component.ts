@@ -21,9 +21,7 @@ export class EditExperiencesComponent implements OnInit{
       }, err => {
         alert("Error al modificar la experiencia laboral");
         this.router.navigate(['']);
-      }
-    )
-
+      })
   }
   
   onUpdate():void{
