@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { person } from '../model/person.model';
+import { Person } from '../model/person.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonService {
-  URL = 'http://localhost:8080/personas';
+  
   constructor(private http: HttpClient) {}
-
-    public getPerson(): Observable<person>{
-      return this.http.get<person>(this.URL + '/get/');
+    URL = 'http://localhost:8080/persons/'
+    
+    public getPerson(): Observable<Person>{
+      return this.http.get<Person>(this.URL + 'get/profile');
     }
   
 }

@@ -10,15 +10,18 @@
             <a href="https://github.com/JoacoPerezCampos" title="GitHub">
                 <img src="https://archive.org/download/githubLogo/github.png" alt="github" class="socialLogo">
             </a>
-            <a href="www.linkedin.com/in/joacoperezcampos" title="LinkedIn">
+            <a href="https://linkedin.com/in/joacoperezcampos" title="LinkedIn">
                 <img src="https://archive.org/download/LinkedInLogo/linkedin.png" alt="linkedin" class="socialLogo">
             </a>
             <a href="https://www.instagram.com/activasonido" title="Instagram">
                 <img src="https://archive.org/download/instagramlogo_202302/instagram.png" alt="instagram"
                     class="socialLogo">
             </a>
-            <button onclick="document.location=''" class="btn btn-outline-success" id="login-btn" title="Log In">
-                <label for="btn-s"><b>Log In</b></label>
+            <button class="btn btn-outline-light" id="login-btn" title="login" (click)="login()" *ngIf="!isLogged">
+                <label for="btn-s"><b>Login</b></label>
+            </button>
+            <button class="btn btn-outline-light" id="login-btn" title="logout" (click)="onLogOut()" *ngIf="isLogged">
+                <label for="btn-s"><b></b>Logout</label>
             </button>
         </div>
     </nav>

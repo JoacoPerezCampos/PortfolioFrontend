@@ -34,7 +34,7 @@ h3 {
     vertical-align: middle;
     font-size: auto;
 }
-@media (max-width: 628px){
+@media (max-width: 652px){
     .socialLogo{
         width: auto;
         height: 1.5em;

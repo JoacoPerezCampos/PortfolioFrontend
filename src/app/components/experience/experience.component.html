@@ -1,84 +1,24 @@
 <div class="row">
     <h3>Experiencia Laboral</h3>
     <hr>
-    <div class="text-center col-xm-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-        <img src="https://archive.org/download/logoAM/logoAS.jpg" alt="Activa Sonido">
-    </div>
-    <div class="col-xm-12 col-sm-12 col-md-11 col-lg-11 col-xl-11">
-        <ul>
-            <li>
-                <h5>Title 1</h5>-<h6>Year</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque, aliquam veritatis
-                    consequuntur id accusamus corporis. Repellat minima rem, architecto fuga et deleniti aliquid
-                    eveniet, officiis laborum sunt quis eius. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Facilis qui tempora ex deleniti eaque quae voluptas, sit atque laboriosam quos libero accusamus
-                    velit nobis nihil in excepturi commodi pariatur magni?</p>
-            </li>
-        </ul>
-        <hr>
-    </div>
-    <div class="text-center col-xm-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-        <img src="https://archive.org/download/logoAM/LogoRB.jpg" alt="Radio Comunitaria Barriletes">
-    </div>
-    <div class="col-xm-12 col-sm-12 col-md-11 col-lg-11 col-xl-11">
-        <ul>
-            <li>
-                <h5>Title 1</h5>-<h6>Year</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque, aliquam veritatis
-                    consequuntur id accusamus corporis. Repellat minima rem, architecto fuga et deleniti aliquid
-                    eveniet, officiis laborum sunt quis eius. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Facilis qui tempora ex deleniti eaque quae voluptas, sit atque laboriosam quos libero accusamus
-                    velit nobis nihil in excepturi commodi pariatur magni?</p>
-            </li>
-        </ul>
-        <hr>
-    </div>
-    <div class="text-center col-xm-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-        <img src="https://archive.org/download/logoAM/logoAM.png" alt="AM Sonido">
-    </div>
-    <div class="col-xm-12 col-sm-12 col-md-11 col-lg-11 col-xl-11">
-        <ul>
-            <li>
-                <h5>Title 1</h5>-<h6>Year</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque, aliquam veritatis
-                    consequuntur id accusamus corporis. Repellat minima rem, architecto fuga et deleniti aliquid
-                    eveniet, officiis laborum sunt quis eius. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Omnis adipisci magni harum asperiores? Dignissimos ratione sint, corporis, delectus mollitia at quos
-                    illo nihil magni eius aspernatur molestiae iste soluta eveniet.</p>
-            </li>
-        </ul>
-        <hr>
-    </div>
-    <div class="text-center col-xm-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-        <img src="https://archive.org/download/logoAM/logoH.png" alt="Hillairet Eventos">
-    </div>
-    <div class="col-xm-12 col-sm-12 col-md-11 col-lg-11 col-xl-11">
-        <ul>
-            <li>
-                <h5>Title 1</h5>-<h6>Year</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque, aliquam veritatis
-                    consequuntur id accusamus corporis. Repellat minima rem, architecto fuga et deleniti aliquid
-                    eveniet, officiis laborum sunt quis eius. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Omnis adipisci magni harum asperiores? Dignissimos ratione sint, corporis, delectus mollitia at quos
-                    illo nihil magni eius aspernatur molestiae iste soluta eveniet.</p>
-            </li>
-        </ul>
-        <hr>
-    </div>
-    <div class="text-center col-xm-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
-        <img src="https://archive.org/download/logoAM/logoLK.png" alt="La Kabra Sonido">
-    </div>
-    <div class="col-xm-12 col-sm-12 col-md-11 col-lg-11 col-xl-11">
-        <ul>
-            <li>
-                <h5>Title 1</h5>-<h6>Year</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque, aliquam veritatis
-                    consequuntur id accusamus corporis. Repellat minima rem, architecto fuga et deleniti aliquid
-                    eveniet, officiis laborum sunt quis eius. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Omnis adipisci magni harum asperiores? Dignissimos ratione sint, corporis, delectus mollitia at quos
-                    illo nihil magni eius aspernatur molestiae iste soluta eveniet.</p>
-            </li>
-        </ul>
-        <hr>
+    <button type="button" class="btn btn-outline-light" routerLink="/newExp" *ngIf="isLogged">Agregar nueva
+        experiencia</button>
+    <div *ngFor="let Experience of exp" class="row">
+        <div class="text-center col-xm-12 col-sm-12 col-md-1 col-lg-1 col-xl-1">
+            <img src={{Experience.expImgUrl}} alt="expImg">
+        </div>
+        <div class="col-xm-12 col-sm-12 col-md-11 col-lg-11 col-xl-11">
+            <ul>
+                <li>
+                    <h5>{{Experience.expName}}</h5>
+                    <hr>
+                    <p>{{Experience.expDescription}}</p>
+                </li>
+            </ul>
+        </div>
+        <aside>
+            <button type="button" class="btn btn-outline-light" routerLink="/update/{{Experience.id}}" *ngIf="isLogged"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-light" (click)="delete(Experience.id)" *ngIf="isLogged"><i class="bi bi-trash3"></i></button>
+        </aside>
     </div>
 </div>
