@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Education } from 'src/app/model/education';
 import { EducationService } from 'src/app/service/education.service';
-import { ExperienceService } from 'src/app/service/experience.service';
-import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-new-education',

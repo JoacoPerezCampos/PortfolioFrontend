@@ -11,13 +11,13 @@ import { EducationService } from 'src/app/service/education.service';
 export class EditEducationComponent implements OnInit{
   ed: Education = null;
 
-  constructor(private educationService: EducationService, private auctivatedRoute: ActivatedRoute, private router: Router){
+  constructor(private educationService: EducationService, private activatedRoute: ActivatedRoute, private router: Router){
 
   }
 
 
   ngOnInit(): void {
-    const id = this.auctivatedRoute.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
     this.educationService.detail(id).subscribe(data =>{
       this.ed = data;
     }, err =>{
@@ -27,7 +27,7 @@ export class EditEducationComponent implements OnInit{
   }
 
   onUpdate():void{
-    const id = this.auctivatedRoute.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
     this.educationService.update(id, this.ed).subscribe(data =>{
       this.router.navigate(['']);
     }, err =>{

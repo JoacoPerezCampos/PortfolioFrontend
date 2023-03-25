@@ -17,7 +17,7 @@
             </ul>
         </div>
         <aside>
-            <button type="button" class="btn btn-outline-light" routerLink="/update/{{Experience.id}}" *ngIf="isLogged"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-light" routerLink="/expUpdate/{{Experience.id}}" *ngIf="isLogged"><i class="bi bi-pencil-square"></i></button>
             <button type="button" class="btn btn-outline-light" (click)="delete(Experience.id)" *ngIf="isLogged"><i class="bi bi-trash3"></i></button>
         </aside>
     </div>

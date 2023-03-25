@@ -1,0 +1,50 @@
+<section>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <h2 class="fw-bold mb-2 text-uppercase">Nuevo proyecto</h2>
+                            <p class="text-white-50 mb-5">Complete los siguientes campos</p>
+                            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                                <div class="form-outline form-white mb-4">
+                                    <label for="pName">Nombre del proyecto</label>
+                                    <input type="text" class="form-control form-control-lg" id="pName" name="pName"
+                                        [(ngModel)]="pName" required>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <label for="description">Descripción</label>
+                                    <textarea type="text" class="form-control form-control-lg" id="description"
+                                        name="description" [(ngModel)]="pDescription" required>
+                                    </textarea>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <label for="img1url">Captura de pantalla 1 del proyecto (url)</label>
+                                    <input type="text" class="form-control form-control-lg" id="img1url"
+                                        name="img1url" [(ngModel)]="pImg1Url">
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <label for="img2url">Captura de pantalla 1 del proyecto (url)</label>
+                                    <input type="text" class="form-control form-control-lg" id="img2url"
+                                        name="img2url" [(ngModel)]="pImg2Url">
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <label for="img3url">Captura de pantalla 1 del proyecto (url)</label>
+                                    <input type="text" class="form-control form-control-lg" id="img3url"
+                                        name="img3url" [(ngModel)]="pImg3Url">
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    <label for="img4url">Captura de pantalla 1 del proyecto (url)</label>
+                                    <input type="text" class="form-control form-control-lg" id="img4url"
+                                        name="img4url" [(ngModel)]="pImg4Url">
+                                </div>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Agregar proyecto</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

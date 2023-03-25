@@ -1,87 +1,45 @@
 <div class="row">
   <h3>Proyectos</h3>
   <hr>
-  <h4>Portfolio Web</h4>
-  <div class="col-12">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae corporis repellat totam assumenda, est
-      consequatur aspernatur facere iusto, quos laborum praesentium, tenetur similique at esse dolorum possimus
-      numquam iste neque?</p>
-  </div>
-  <div id="carousel1" class="carousel carousel-dark slide carousel-fade col-12" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  <button type="button" class="btn btn-outline-light" routerLink="/newProyect" *ngIf="isLogged">Agregar nuevo
+    proyecto</button>
+  <div  *ngFor="let Proyect of proyect" class="row">
+    <h4>{{Proyect.pName}}</h4>
+    <div class="col-12">
+      <p>{{Proyect.pDescription}}</p>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="https://archive.org/download/porfolio_202302/porfolio1.jpg"
-          alt="Slide 1">
+    <div id="carousel1" class="carousel carousel-dark slide carousel-fade col-12" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://archive.org/download/porfolio_202302/porfolio2.jpg"
-          alt="Slide 2">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src={{Proyect.pImg1Url}} alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src={{Proyect.pImg2Url}} alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src={{Proyect.pImg3Url}} alt="Slide 3">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src={{Proyect.pImg4Url}} alt="Slide 4">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://archive.org/download/porfolio_202302/porfolio3.jpg"
-          alt="Slide 3">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://archive.org/download/porfolio_202302/porfolio4.jpg"
-          alt="Slide 4">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <hr>
-  <h4>Asociacion Civil Barriletes</h4>
-  <div class="col-12">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minima praesentium sequi cum molestiae ullam
-      aliquam ab error neque autem. Exercitationem ducimus eligendi quae tempora a? Repudiandae accusamus deleniti
-      numquam!</p>
-  </div>
-  <div id="carousel2" class="carousel carousel-dark slide carousel-fade col-12" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carousel2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="https://archive.org/download/barriletes_202302/barriletes1.jpg"
-          alt="Slide 1">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://archive.org/download/barriletes_202302/barriletes2.jpg"
-          alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://archive.org/download/barriletes_202302/barriletes3.jpg"
-          alt="Slide 3">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://archive.org/download/barriletes_202302/barriletes4.jpg"
-          alt="Slide 4">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <button type="button" class="btn btn-outline-light" routerLink="/proyectUpdate/{{Proyect.id}}" *ngIf="isLogged"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-light" (click)="delete(Proyect.id)" *ngIf="isLogged"><i class="bi bi-trash3"></i></button>
   </div>
 </div>

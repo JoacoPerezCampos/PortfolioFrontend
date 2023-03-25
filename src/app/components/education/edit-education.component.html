@@ -9,20 +9,20 @@
                             <p class="text-white-50 mb-5">Complete los siguientes campos</p>
                             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                                 <div class="form-outline form-white mb-4">
-                                    <label for="expName">Nombre de la institución - Periodo</label>
-                                    <input type="text" class="form-control form-control-lg" id="expName" name="expName"
+                                    <label for="edName">Nombre de la institución - Periodo</label>
+                                    <input type="text" class="form-control form-control-lg" id="edName" name="edName"
                                         [(ngModel)]="ed.edName" required>
                                 </div>
                                 <div class="form-outline form-white mb-4">
-                                    <label for="expDescription">Descripción</label>
-                                    <textarea type="text" class="form-control form-control-lg" id="expDescription"
-                                        name="expDescription" [(ngModel)]="ed.edDescription" required>
+                                    <label for="edDescription">Descripción</label>
+                                    <textarea type="text" class="form-control form-control-lg" id="edDescription"
+                                        name="edDescription" [(ngModel)]="ed.edDescription" required>
                                     </textarea>
                                 </div>
                                 <div class="form-outline form-white mb-4">
-                                    <label for="expImgUrl">Logo de la institución (url)</label>
-                                    <input type="text" class="form-control form-control-lg" id="expImgUrl"
-                                        name="expImgUrl" [(ngModel)]="ed.edImgUrl">
+                                    <label for="edImgUrl">Logo de la institución (url)</label>
+                                    <input type="text" class="form-control form-control-lg" id="edImgUrl"
+                                        name="edImgUrl" [(ngModel)]="ed.edImgUrl">
                                 </div>
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Actualizar estudio</button>
                             </form>

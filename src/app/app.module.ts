@@ -21,6 +21,11 @@ import { NewExperienceComponent } from './components/experience/new-experience.c
 import { EditExperiencesComponent } from './components/experience/edit-experience.component';
 import { NewEducationComponent } from './components/education/new-education.component';
 import { EditEducationComponent } from './components/education/edit-education.component';
+import { EditSkillsComponent } from './components/skills/edit-skills.component';
+import { NewSkillsComponent } from './components/skills/new-skills.component';
+import { EditAboutComponent } from './components/about/edit-about.component';
+import { EditProyectComponent } from './components/proyects/edit-proyect.component';
+import { NewProyectComponent } from './components/proyects/new-proyect.component';
 
 
 @NgModule({
@@ -40,7 +45,12 @@ import { EditEducationComponent } from './components/education/edit-education.co
     NewExperienceComponent,
     EditExperiencesComponent,
     NewEducationComponent,
-    EditEducationComponent
+    EditEducationComponent,
+    EditSkillsComponent,
+    NewSkillsComponent,
+    EditAboutComponent,
+    EditProyectComponent,
+    NewProyectComponent
   ],
   imports: [
     BrowserModule,

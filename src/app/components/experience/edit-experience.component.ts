@@ -27,6 +27,7 @@ export class EditExperiencesComponent implements OnInit{
   onUpdate():void{
     const id = this.activatedRoute.snapshot.params['id'];
     this.experienceService.update(id, this.exp).subscribe(data =>{
+      this.exp = data;
       this.router.navigate(['']);
     }, err =>{
       alert("Error al modificar la experiencia laboral");
